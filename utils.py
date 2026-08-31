@@ -6,7 +6,7 @@ from google import genai
 from google.genai import types
 
 from prompt_template import DAILY_SUMMARY_PROMPT, TASK_ANALYSIS_PROMPT
-from xiaohongshu_model import DailyTaskList
+from model import DailyTaskList
 
 
 # 軽量な文章整理に適した安定版モデルを使用する。
