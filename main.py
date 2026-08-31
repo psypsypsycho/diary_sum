@@ -48,14 +48,12 @@ sync_widget_values()
 st.title("AI日報作成ツール 📝")
 st.caption("作業メモをタスクに分解し、時刻を調整してから提出用の日報を作成します。")
 
+# APIキーはStreamlit CloudのSecretsから自動取得する。
+# ブラウザにはAPIキーを表示・送信しない。
+api_key = ""
+
 with st.sidebar:
-    st.subheader("API設定")
-    api_key = st.text_input(
-        "Gemini APIキー",
-        type="password",
-        help="環境変数GEMINI_API_KEYが設定済みの場合は空欄でも実行できます。",
-    )
-    st.markdown("[Gemini APIキーを取得](https://aistudio.google.com/app/apikey)")
+    st.success("AI機能を利用できます")
     st.info("社外秘・個人情報・顧客情報は入力しないでください。")
 
 st.subheader("1. 今日行ったことを入力")
